@@ -18,5 +18,5 @@ spec:
       containers:
       - name: nginx
         image: https://hub.docker.com/repository/docker/wortigon/szf_2/latest
-        ports: 5000
+        ports:
         - containerPort: 80
