@@ -2,7 +2,6 @@ apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
   name: flask_server_deployment
-  namespace: practice_deployment_MGP
   labels:
     app: komm
 spec:
@@ -16,7 +15,7 @@ spec:
         app: komm
     spec:
       containers:
-      - name: nginx
+      - name: komm
         image: https://hub.docker.com/repository/docker/wortigon/szf_2/latest
         ports:
         - containerPort: 80

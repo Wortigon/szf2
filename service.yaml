@@ -2,11 +2,11 @@ kind: Service
 apiVersion: v1
 metadata:
   name: flask_server_service
-  namespace: practice_deployment_MGP
 spec:
   selector:
     app: komm
   ports:
   - protocol: TCP
     port: 80
+    targetPort: 5000
   type: nodeport
