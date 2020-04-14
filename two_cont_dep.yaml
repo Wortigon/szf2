@@ -1,7 +1,7 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: flask-server-deployment
+  name: dupla-kontener
   labels:
     app: komm
 spec:
@@ -15,7 +15,11 @@ spec:
         app: komm
     spec:
       containers:
-      - name: komm
+      - name: szerver
         image: https://hub.docker.com/repository/docker/wortigon/szf_2/latest
         ports:
         - containerPort: 5000
+      - name: kliens
+        image: ellerbrock/alpine-bash-curl-ssl
+        command: ["ash", "-c"]
+        args: ["while true; do curl -L localhost:5000; sleep 1; done"]

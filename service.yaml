@@ -1,11 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: flask-server-service
+  name: flask_server_service
 spec:
   selector:
     app: komm
   ports:
   - protocol: TCP
     port: 5000
-  type: NodePort
+  type: nodeport
