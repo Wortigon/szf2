@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: szerver
-        image: https://hub.docker.com/repository/docker/wortigon/szf_2/latest
+        image: https://hub.docker.com/repository/docker/wortigon/szf_2
         ports:
         - containerPort: 5000
       - name: kliens
